@@ -81,12 +81,12 @@
             // 
             label3.AutoSize = true;
             label3.Dock = DockStyle.Fill;
-            label3.Font = new Font("Yu Gothic UI Semibold", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Yu Gothic UI Semibold", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(3, 192);
             label3.Name = "label3";
             label3.Size = new Size(206, 135);
             label3.TabIndex = 2;
-            label3.Text = "Введите срок вклада";
+            label3.Text = "Срок вклада";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBoxSumma
@@ -101,6 +101,7 @@
             textBoxSumma.Name = "textBoxSumma";
             textBoxSumma.Size = new Size(193, 45);
             textBoxSumma.TabIndex = 4;
+            textBoxSumma.Text = "Введите сумму";
             textBoxSumma.TextAlign = HorizontalAlignment.Center;
             textBoxSumma.TextChanged += textBoxSumma_TextChanged;
             // 
@@ -110,9 +111,10 @@
             tableLayoutLeft.SetColumnSpan(buttonCalc, 2);
             buttonCalc.Dock = DockStyle.Fill;
             buttonCalc.Font = new Font("Yu Gothic UI Semibold", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonCalc.Location = new Point(3, 330);
+            buttonCalc.Location = new Point(20, 330);
+            buttonCalc.Margin = new Padding(20, 3, 20, 3);
             buttonCalc.Name = "buttonCalc";
-            buttonCalc.Size = new Size(419, 53);
+            buttonCalc.Size = new Size(385, 53);
             buttonCalc.TabIndex = 3;
             buttonCalc.Text = "Рассчитать";
             buttonCalc.UseVisualStyleBackColor = false;
@@ -130,7 +132,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(193, 36);
             comboBox1.TabIndex = 5;
-            comboBox1.Text = "Выбрать";
+            comboBox1.Text = "Выберете срок";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label1
@@ -151,12 +153,12 @@
             // 
             label2.AutoSize = true;
             label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Yu Gothic UI Semibold", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Yu Gothic UI Semibold", 20F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(3, 57);
             label2.Name = "label2";
             label2.Size = new Size(206, 135);
             label2.TabIndex = 1;
-            label2.Text = "Введите сумму вклада";
+            label2.Text = "Сумма вклада";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             label2.Click += label2_Click;
             // 
@@ -334,6 +336,7 @@
             Name = "WinFormBank";
             Text = "Банковский калькулятор";
             FormClosing += WinFormBank_FormClosing;
+            Load += WinFormBank_Load;
             tableLayoutLeft.ResumeLayout(false);
             tableLayoutLeft.PerformLayout();
             tableLayoutRight.ResumeLayout(false);

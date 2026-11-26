@@ -56,24 +56,37 @@ namespace WinFormBank
             int period;
             double summa;
 
-            // Обработчик ошибок
+            // Обработчик ошибок 1
             try
             {
-                summa = Convert.ToDouble(textBoxSumma.Text.ToString());
+                summa = Convert.ToDouble(textBoxSumma.Text.ToString()); // summa принимает данные, вводимые в textBox
             }
             catch (Exception)
             {
                 MessageBox.Show(
-                "Сумма должна быть числом",
-                "Ошибка",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Warning
-            );
+                    "Сумма должна быть числом",
+                    "Ошибка",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
                 return;
             }
+
+            if (summa <= 0)
+            {
+                MessageBox.Show(
+                    "Сумма не может быть меньше нуля",
+                    "Ошибка",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Stop
+                );
+                return;
+            }
+
+            // Обработчик ошибок 2
             try
             {
-                period = Convert.ToInt32(comboBox1.Text.ToString()[0..3].Trim());
+                period = Convert.ToInt32(comboBox1.Text.ToString()[0..3].Trim()); // period принимает данные, выбранные в comboBox
             }
             catch (Exception)
             {
@@ -88,7 +101,7 @@ namespace WinFormBank
 
             double percentBank = 0;
 
-
+            // Варианты выбора срока
             switch (period)
             {
                 case 91: percentBank = BANKTHREEMONTH; break;
@@ -144,6 +157,11 @@ namespace WinFormBank
             {
                 e.Cancel = true;
             }
+        }
+
+        private void WinFormBank_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,9 +35,9 @@ namespace WinFormBank
 
         }
 
-        const double BANKTHREEMONTH = 11.50; // 3 месяца
-        const double BANKSIXMONTH = 11.75; // 6 месяцев
-        const double BANKYEAR = 12.50; // год
+        const double BANKTHREEMONTH = 11.50;   // 3 месяца
+        const double BANKSIXMONTH = 11.75;     // 6 месяцев
+        const double BANKYEAR = 12.50;         // год
 
         /// <summary>
         /// Обработчик на простой клик для запуска расчёта
@@ -55,18 +55,40 @@ namespace WinFormBank
 
             int period;
             double summa;
+
+            // Обработчик ошибок
             try
             {
                 summa = Convert.ToDouble(textBoxSumma.Text.ToString());
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(
+                "Сумма должна быть числом",
+                "Ошибка",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning
+            );
+                return;
+            }
+            try
+            {
                 period = Convert.ToInt32(comboBox1.Text.ToString()[0..3].Trim());
             }
             catch (Exception)
             {
-                textBoxResult.Text = "ОШИБКА: Введены некорректные данные";
+                MessageBox.Show(
+                "Вы не выбрали срок",
+                "Ошибка",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning
+            );
                 return;
             }
 
             double percentBank = 0;
+
+
             switch (period)
             {
                 case 91: percentBank = BANKTHREEMONTH; break;
@@ -103,6 +125,25 @@ namespace WinFormBank
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void WinFormBank_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result =
+            MessageBox.Show(
+                "Вы действительно хотите закрыть окно?",
+                "Подтверждение закрытия",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+            if (result == DialogResult.Yes)
+            {
+                e.Cancel = false;                    // Разрешить открыть окно
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

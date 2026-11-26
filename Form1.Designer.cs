@@ -95,11 +95,11 @@
             textBoxSumma.Dock = DockStyle.Fill;
             textBoxSumma.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxSumma.ForeColor = SystemColors.WindowText;
-            textBoxSumma.Location = new Point(222, 77);
-            textBoxSumma.Margin = new Padding(10, 20, 10, 20);
+            textBoxSumma.Location = new Point(222, 102);
+            textBoxSumma.Margin = new Padding(10, 45, 10, 45);
             textBoxSumma.Multiline = true;
             textBoxSumma.Name = "textBoxSumma";
-            textBoxSumma.Size = new Size(193, 95);
+            textBoxSumma.Size = new Size(193, 45);
             textBoxSumma.TabIndex = 4;
             textBoxSumma.TextAlign = HorizontalAlignment.Center;
             textBoxSumma.TextChanged += textBoxSumma_TextChanged;
@@ -121,15 +121,16 @@
             // comboBox1
             // 
             comboBox1.BackColor = Color.FromArgb(255, 252, 161);
-            comboBox1.Dock = DockStyle.Fill;
+            comboBox1.Dock = DockStyle.Top;
             comboBox1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "91 день", "181 день", "365 дней" });
-            comboBox1.Location = new Point(222, 212);
-            comboBox1.Margin = new Padding(10, 20, 10, 20);
+            comboBox1.Location = new Point(222, 237);
+            comboBox1.Margin = new Padding(10, 45, 10, 20);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(193, 36);
             comboBox1.TabIndex = 5;
+            comboBox1.Text = "Выбрать";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label1
@@ -332,6 +333,7 @@
             MinimumSize = new Size(879, 599);
             Name = "WinFormBank";
             Text = "Банковский калькулятор";
+            FormClosing += WinFormBank_FormClosing;
             tableLayoutLeft.ResumeLayout(false);
             tableLayoutLeft.PerformLayout();
             tableLayoutRight.ResumeLayout(false);

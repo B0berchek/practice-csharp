@@ -113,6 +113,9 @@ namespace WinFormBank
             countMonth = period / 30;
             bonusInPeriod = 0;
 
+            textBoxResult.AppendText($"Ваша месячная ставка = {percentBank}%\r\n");
+            textBoxResult.AppendText($"\r\n");
+
             for (int month = 1; month <= countMonth; month++)
             {
                 bonusMonth = percentBank / 100 / 12 * summa;

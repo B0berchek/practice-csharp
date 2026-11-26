@@ -101,7 +101,6 @@
             textBoxSumma.Name = "textBoxSumma";
             textBoxSumma.Size = new Size(193, 45);
             textBoxSumma.TabIndex = 4;
-            textBoxSumma.Text = "Введите сумму";
             textBoxSumma.TextAlign = HorizontalAlignment.Center;
             textBoxSumma.TextChanged += textBoxSumma_TextChanged;
             // 

@@ -9,3 +9,14 @@ C:\Users\Public\11ОП\Шефов Артём\WinFormGladiator\obj\Debug\WinFormG
 C:\Users\Public\11ОП\Шефов Артём\WinFormGladiator\obj\Debug\WinFormGladiator.csproj.CoreCompileInputs.cache
 C:\Users\Public\11ОП\Шефов Артём\WinFormGladiator\obj\Debug\WinFormGladiator.exe
 C:\Users\Public\11ОП\Шефов Артём\WinFormGladiator\obj\Debug\WinFormGladiator.pdb
+C:\Users\Public\11ОП\Шефов Артём\practice-csharp\bin\Debug\WinFormGladiator.exe.config
+C:\Users\Public\11ОП\Шефов Артём\practice-csharp\bin\Debug\WinFormGladiator.exe
+C:\Users\Public\11ОП\Шефов Артём\practice-csharp\bin\Debug\WinFormGladiator.pdb
+C:\Users\Public\11ОП\Шефов Артём\practice-csharp\obj\Debug\WinFormGladiator.csproj.AssemblyReference.cache
+C:\Users\Public\11ОП\Шефов Артём\practice-csharp\obj\Debug\WinFormGladiator.csproj.SuggestedBindingRedirects.cache
+C:\Users\Public\11ОП\Шефов Артём\practice-csharp\obj\Debug\WinFormGladiator.Form1.resources
+C:\Users\Public\11ОП\Шефов Артём\practice-csharp\obj\Debug\WinFormGladiator.Properties.Resources.resources
+C:\Users\Public\11ОП\Шефов Артём\practice-csharp\obj\Debug\WinFormGladiator.csproj.GenerateResource.cache
+C:\Users\Public\11ОП\Шефов Артём\practice-csharp\obj\Debug\WinFormGladiator.csproj.CoreCompileInputs.cache
+C:\Users\Public\11ОП\Шефов Артём\practice-csharp\obj\Debug\WinFormGladiator.exe
+C:\Users\Public\11ОП\Шефов Артём\practice-csharp\obj\Debug\WinFormGladiator.pdb
